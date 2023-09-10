@@ -2,7 +2,7 @@
 
 EMAIL=''
 
-while getotps e: "${OPTION}"
+while getopts e: OPTION
 do
     case "${OPTION}" in
         e)
@@ -13,7 +13,7 @@ do
     esac
 done
 
-if [[ "${OPTION}" = '']]
+if [[ "${OPTION}" = '' ]]
 then
     echo 'Please input an email as identifier.'
     exit 1
